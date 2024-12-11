@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Texas Bank ATM</title>
+    <meta name="description" content="ATM Interface" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="atmContainer">
+      <div class="atmTitle">Welcome to Texas Bank!<br> ATM</div>
+
+      <div class="atmBody">
+        <div class="btnLeftContainer">
+          <button class="btnSelector" onclick="startDeposit()">Deposit</button>
+          <button class="btnSelector" onclick="startWithdraw()">Withdraw</button>
+          <button class="btnSelector" onclick="checkBalance()">Check Bal</button>
+        </div>
+
+        <div class="screen">
+          <div class="mainDisplay">
+            <div class="scrn2" id="mainDisplay">Please insert your card.</div>
+            <div class="scrn3" id="accountDisplay"></div>
+          </div>
+        </div>
+
+        <div class="btnRightContainer">
+          <button class="btnSelector" onclick="submitPIN()">Enter PIN</button>
+          <button class="btnSelector">Switch Acct.</button>
+          <button class="btnSelector">Return</button>
+        </div>
+      </div>
+      <hr />
+      <div class="balContainer">
+        <p class="acctn">Checking Account: $<span id="checkingBalance">0.00</span></p>
+        <p class="acctn">Savings Account: $<span id="savingsBalance">0.00</span></p>
+      </div>
+
+      <div class="keyPad">
+        <div class="rowOne">
+          <button onclick="enterNumber(1)" class="keys">1</button>
+          <button onclick="enterNumber(2)" class="keys">2</button>
+          <button onclick="enterNumber(3)" class="keys">3</button>
+        </div>
+
+        <div class="rowOne">
+          <button onclick="enterNumber(4)" class="keys">4</button>
+          <button onclick="enterNumber(5)" class="keys">5</button>
+          <button onclick="enterNumber(6)" class="keys">6</button>
+        </div>
+
+        <div class="rowOne">
+          <button onclick="enterNumber(7)" class="keys">7</button>
+          <button onclick="enterNumber(8)" class="keys">8</button>
+          <button onclick="enterNumber(9)" class="keys">9</button>
+        </div>
+
+        <div class="rowOne">
+          <button onclick="clearEntry()" class="keys">CLR</button>
+          <button onclick="enterNumber(0)" class="keys">0</button>
+          <button onclick="submitPIN()" class="keys">ENTER</button>
+        </div>
+
+        <button class="cardSlot" onclick="insertCard()">Insert Card</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
